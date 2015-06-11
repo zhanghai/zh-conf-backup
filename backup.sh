@@ -7,7 +7,7 @@ if [[ ! -d home ]]; then
     exit 1
 fi
 
-# Ensure and cd to .backup
+# Ensure and init .backup
 if [[ ! -d .backup ]]; then
     if [[ -e .backup ]]; then
         echo "ERROR: .backup is not a directory"
@@ -20,6 +20,7 @@ if [[ ! -d .backup ]]; then
     cd ..
 fi
 
+# Note: Directories starting with . will not be included in the expansion of *.
 # Clean
 rm -rf .backup/*
 
