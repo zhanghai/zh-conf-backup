@@ -20,10 +20,10 @@ if [[ ! -d .backup ]]; then
     cd ..
 fi
 
+# Note: Directories starting with . will not be included in the expansion of *. We will only copy and clean */.
+
 # Clean
-shopt -s extglob
-rm -rf .backup/!(.|..|.git)
-shopt -u extglob
+rm -rf .backup/*/
 
 # Backup
 cp -Lr */ .backup/
