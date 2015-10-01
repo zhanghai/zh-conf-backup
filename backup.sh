@@ -26,7 +26,10 @@ fi
 rm -rf .backup/*/
 
 # Backup
-cp -Lr */ .backup/
+# Note: root is needed in order to read certain files.
+sudo cp -Lr */ .backup/
+user_and_group="$(id -un):$(id -gn)"
+sudo chown -R "${user_and_group}" .backup/*/
 
 # Push
 cd .backup
