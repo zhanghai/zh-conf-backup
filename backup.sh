@@ -23,7 +23,8 @@ fi
 # Note: Directories starting with . will not be included in the expansion of *. We will only copy and clean */.
 
 # Clean
-rm -rf .backup/*/
+# Note: Use sudo to clean up for possible failure.
+sudo rm -rf .backup/*/
 
 # Backup
 # Note: root is needed in order to read certain files.
