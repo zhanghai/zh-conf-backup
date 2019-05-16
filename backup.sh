@@ -16,7 +16,7 @@ if [[ ! -d .backup ]]; then
     mkdir .backup
     cd .backup
     git init
-    git remote add origin git@github.com:DreaminginCodeZH/zh-conf.git
+    git remote add origin git@github.com:zhanghai/zh-conf.git
     cd ..
 fi
 
